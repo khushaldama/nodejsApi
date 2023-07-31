@@ -13,8 +13,8 @@ app.use(express.static("public"));
 
 
 mongoose.Promise=global.Promise;
-mongoose.connect("mongodb://127.0.0.1:27017/Auto")
-.then(success =>app.listen(3000,(msg)=>console.log("db connected")))
+mongoose.connect("mongodb+srv://kb:Khushal%407272@nodepracticals.ngts4h7.mongodb.net/Auto")
+.then(success =>app.listen(process.env.PORT ||3000,(msg)=>console.log("db connected")))
 .catch(err=>console.log(err.message));
 
 const AutoSchema={
