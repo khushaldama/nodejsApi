@@ -264,9 +264,10 @@
                 if (data.acknowledged) {
                     $("#userModal").modal("toggle");
                     document.getElementById("alertupd").style.display = "block";
+                    getdata();
+
                 }
             };
-            getdata();
         }
         getdata();
        // var addbtn = document.querySelector(".btn.btn-success");
