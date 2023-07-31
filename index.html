@@ -154,7 +154,7 @@
         //get request
         function getdata() {
             var req = new XMLHttpRequest();
-            req.open("GET", "http://localhost:3000/getdata");
+            req.open("GET", "https://node-api-acwo.onrender.com/getdata");
             req.send();
             req.onload = () => {
                 var row = "";
@@ -196,7 +196,7 @@
             };
 
             var request = new XMLHttpRequest();
-            request.open("Post", "http://localhost:3000");
+            request.open("Post", "https://node-api-acwo.onrender.com/");
             request.setRequestHeader("content-type", "application/json");
             request.send(JSON.stringify(obj));
             request.onload = (responseData) => {
@@ -216,7 +216,7 @@
             // var id = parseInt(c3);
             var request = new XMLHttpRequest();
             var c1 = cid;
-            request.open("Delete", "http://localhost:3000/" + c1);
+            request.open("Delete", "https://node-api-acwo.onrender.com/" + c1);
             request.send();
             request.onloadend = () => {
                 document.getElementById("alertdel").style.display = "block";
@@ -231,7 +231,7 @@
             console.log(getId);
 
             var req = new XMLHttpRequest();
-            req.open("get", "http://localhost:3000/getdata/" + getId);
+            req.open("get", "https://node-api-acwo.onrender.com/getdata/" + getId);
             req.send();
             req.onload = () => {
                 var data = JSON.parse(req.response);
@@ -256,7 +256,7 @@
                 cid: cid
             };
             var put = new XMLHttpRequest();
-            put.open("put", "http://localhost:3000/");
+            put.open("put", "https://node-api-acwo.onrender.com/");
             put.setRequestHeader("content-type", "application/json");
             put.send(JSON.stringify(obj));
             put.onload = (responseData) => {
